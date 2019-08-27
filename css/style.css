@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.pic{
+    border-radius: 160px;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-y: auto;
+    transition: 300ms;
+}
+.img{
+    background-image: url(../images/bckgrnd.png);
+}
+.img1{
+    background-image: url(../images/night.jpg);
+}
+.img2{
+    background-image: url(../images/stars.jpg);
+}
+
+.nav{
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 28px;
+    font-family: Verdana;
+    font-weight: bold;
+    height: 90px;
+    margin: 20px 0;
+    flex: left;
+    display: inline-block; 
+    background-color: black;
+    color: beige;
+    line-height: 90px;
+    text-align: center;
+    transition: 300ms;
+}
+
+a.active, .nav a:hover{
+    background-color: white;
+    color: black;  
+    width: 100%; 
+}
+
+.a, .b, .c{
+    width: 75%;
+}
+
+.content{
+    position: absolute;
+    width: 60%;
+    min-height: 700px;
+    height: auto;
+    right: 0;
+    top: 10%;
+}
+
+.home{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-family: Verdana;    
+    text-transform: uppercase;
+}
+.home h1{
+    font-size: 70px;
+    padding-right: 450px;
+    border-bottom: 1px solid white;
+}
+.home h2{
+    font-size: 28px;
+    padding: 5px 0;
+}
+
+.about{
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    color: white;
+    font-family: verdana;
+    padding: 0 60px;
+    width: 40%;
+    display: none;
+}
+.about p{
+    font-size: 18px;
+    border-bottom: 1px solid white;
+}
+
+.prj{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: 30%;
+    top: 20%;
+    margin-left: -50px;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+}
+.prj p, h1{
+    font-size: 20px;
+    font-family: verdana;
+    color: white;
+    text-align: center;
+}
+
+.prj-pics{
+    position: absolute;
+    bottom: 5%;
+    width: auto;
+    height: auto;
+    left: 30%;
+    margin-left: -50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
