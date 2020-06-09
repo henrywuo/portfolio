@@ -25,36 +25,135 @@
         </div>
 
         <div class= "about">
-            <img src="portrait.png" class="pic" alt="portrait" style="width:350px; height:350px;">
+            <img src="portrait.jpg" class="pic" alt="portrait" style="width:350px; height:350px;">
             <p>
                 Hello,<br>
-                I am Henry Ou, a graduating senior at UCSD,
+                I am Henry Ou, UCSD Alumni,
                 <br> I am a UX/UI designer, 
                 <br> My major is Cognitive Science Specializing in Human Computer Interaction.
-                <br> I hope one day I can use my skills in storyboarding and design skill to make video games with others.
+                <br> Passionate gamer, but more passionate about creating, designing, and making things.
             </p>
-            <h2>Skills :</h3><h3>HTML, CSS, JavasScript, Java</h2>
+            <h2>Skills :</h3><h3>HTML, CSS, JavasScript, Java, WordPress</h2>
         </div>
 
         <div class="prj">
-            <h1>Free Me</h1>
+            <h1>VegHub</h1>
             <p>
-                This is an app that helps with mental health by helping users contact and interact with other people.
-                This app is currently being protoype by me and 5 other people.
-                The app is intended to help users with depression and stress to have a way to relief them by talking to either professionals or other
-                train volunteers. It also includes other resources such as meditation intructions and calm music to relax users.<br>
-                The app so far has a logo and a protoype design created using Adobe XD. We also talk about who the potential users are, which is college students.
-            </p>
+                This is a recipe website that is cater for vegetarians.<br>
+                It is made in a more social media style in mind for ease of sharing and spreading.<br>
+                This project was made in HTML, and JavasScript.
         </div>
         <div class="prj-pics">
-            <img src="FM.JPG" style="border-radius: 100px; width:200px; height: 200px;">
-            <img src="prj1.png" style="width: 200px; height: 350;">
-            <img src="prj3.png" style="width: 200px; height: 350;">
-            <img src="prj4.png" style="width: 200px; height: 350;">
-            <img src="prj2.png" style="width: 200px; height: 350;">
+            <div class="row">
+                <div class="column">
+                  <img src="home1.PNG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                  <img src="profile1.PNG" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                  <img src="recipe1.PNG" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                  <img src="display2.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+              </div>
+              
+              <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+              
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="home1.PNG" style="width:100%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="profile1.PNG" style="width:100%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="recipe1.PNG" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="display2.png" style="width:100%">
+                  </div>
+                  
+
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
+              
+              
+                  <div class="column">
+                    <img class="demo cursor" src="home1.PNG" style="width:100%" onclick="currentSlide(1)" alt="Home Page">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="profile1.PNG" style="width:100%" onclick="currentSlide(2)" alt="Profile Page">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="recipe1.PNG" style="width:100%" onclick="currentSlide(3)" alt="Recipe Page">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="display2.png" style="width:100%" onclick="currentSlide(4)" alt="Display Example">
+                  </div>
+                </div>
+              </div>
+
+
         </div>
 
     </div>
+
+
+
+
+
+    <script>
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+
+
+
 
     
     <script type="text/javascript">
